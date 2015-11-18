@@ -9,18 +9,18 @@ Image is based on [sillelien/base-alpine](https://hub.docker.com/r/sillelien/bas
 
     or
 
-    $ docker build -t yourname/alpine-laravel .
+    $ docker build -t yourname/alpine-laravel-base .
 
 ## To run
 Map your application to /var/www directory
 
-    $ docker run -d -p 8000:80 -v laravel-app:/var/www yourname/alpine-laravel
+    $ docker run -d -p 8000:80 -v laravel-app:/var/www yourname/alpine-laravel-base
 
 ## Use with Docker Compose
 A docker-compose.yml with this image would look like:
 
     web:
-      image: michaeldim/alpine-linux
+      image: michaeldim/alpine-laravel-base
       volumes:
         - laravel-app:/var/www
       ports:
